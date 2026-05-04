@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cotillón de Cumpleaños",
+        "precio": 25000,
+        "categoria": "cumpleaños",
+        "descripcion": "Gorritos, globos, props para fotos y 5 bolsitas de regalo básicas.",
+        "img": "assets/cotillon-cumple.jpg",
+        "stock": 3
+        
+    },
+    {
+        "id": 2,
+        "nombre": "Galletas Clásicas",
+        "precio": 2500,
+        "categoria": "snacks",
+        "descripcion": "nuestras galletas tienen base de harina de avena y huevos. Vos elegís si queres de maní, zanahoría, manzana o pollo. Son ideales para premiar a tu mascota o para darle un gustito saludable entre comidas.",   
+        "img": "assets/galletas.jpg",
+        "stock": 10,
+        "variantes": ["Maní y banana", "Zanahoria y manzana", "banana y zanahoría", "Pollo y zanahoria"]
+
+    },
+    {
+        "id": 3,
+        "nombre": "Galletas Gourmet",
+        "precio": 5000,
+        "categoria": "snacks",
+        "descripcion": "Relajantes (manzanilla), 🦴 Articulares (cúrcuma) 🌱 Digestivas (calabaza + avena) 🌾 Sin gluten, 🚫 Sin azúcar / aptas diabéticos (consultado), 🐶 Hipoalergénicas (pocos ingredientes)",
+        "img": "assets/gourmet.jfif",
+        "stock": 5,
+        "variantes": [ "Relajantes", "Articulares", "Digestivas", "Sin gluten", "Sin azúcar", "Hipoalergénicas"]
+    },
+    {
+        "id": 4,
+        "nombre": "Garritas de Gallina (5u)",
+        "precio": 2500,
+        "categoria": "snacks",
+        "descripcion": "Ideal para perris adultos mayores que necesiten una dosis de colageno a sus días. Le podes dar como premio o como complemento de su dieta. Son 100% naturales, sin aditivos ni conservantes. Ayuda a mantener articulaciones saludables y la piel radiante.",  
+        "img": "assets/garrita-de-pollo.jpg",
+        "stock":10
+    },
+    {
+        "id": 5,
+        "nombre": "Hígado Vacuno (50g)",
+        "precio": 2500,
+        "categoria": "snacks",
+        "descripcion": "Snack de hígado de vaca deshidratado 100% natural para perros. Premio premium rico en hierro y vitaminas, sin conservantes. ¡Fortalecé su salud!",
+        "img": "assets/higado-vacuno.jpg",
+        "stock":10
+    },
+    {
+        "id": 6,
+        "nombre": "Tráquea Vacuna (4u)",
+        "precio": 2500,
+        "categoria": "snacks",
+        "descripcion": "La tráquea de res deshidratada es mucho más que un premio; es un mordedor funcional 100% natural.",
+        "img": "assets/traquea-de-vaca.jpg",
+        "stock":5,
+        "variantes": ["Tráquea XL", "Tráquea L", "Tráquea M", "Tráquea S"]
+    },
+    {
+        "id": 7,
+        "nombre": "Oreja de Cerdo (2u)",
+        "precio": 2500,
+        "categoria": "snacks",
+        "descripcion": "Orejas de cerdo deshidratadas 100% naturales para perros. Premio crujiente y delicioso.",
+        "img": "assets/orejas-de-cerdo.jpg",
+        "stock":100
+    },
+    {
+        "id": 8,
+        "nombre": "Sorpresitas Premium (5u)",
+        "precio": 15000,
+        "categoria": "cumpleaños",
+        "descripcion": "5 bolsitas de regalo con una variedad de snacks saludables y juguetes para perros. Ideal para premiar a tu mascota en su cumpleaños o cualquier ocasión especial.",
+        "img": "assets/sorpresita-1.jpg",
+        "stock": 15,
+        "variantes": ["Sorpresita Snack", "Sorpresita Juguete", "Sorpresita Mixta"] 
+    }
+]

@@ -1,0 +1,620 @@
+/* ==========================================
+   1. ESTILOS GENERALES
+========================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #8bc7db;
+    color: #333;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+/* ==========================================
+   2. COMPONENTES GLOBALES (Tarjetas, Inputs, Botones)
+========================================== */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 12px; 
+    font-size: 14px;  
+    cursor: pointer;
+    background: #df5050;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background: #c94343;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="number"], 
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+/* ==========================================
+   3. HEADER Y REGISTRO
+========================================== */
+.header-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    gap: 10px;
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.logo-titulo {
+    margin: 0;
+    font-size: 24px;
+    color: #df5050;
+}
+
+.registro-contenedor {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input-registro {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin: 0;
+}
+#nombre.input-registro { width: 130px; }
+#email.input-registro { width: 160px; }
+
+.btn-registro {
+    padding: 6px 15px;
+    font-size: 14px;
+    width: auto;
+    margin: 0;
+    background: #df5050;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carrito-icono-contenedor {
+    text-align: right;
+    position: relative;
+    cursor: pointer;
+}
+
+.icono-hueso {
+    font-size: 28px;
+    color: #df5050;
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    background: #333;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.usuario-info {
+    margin: 5px 0 0 0;
+    font-weight: bold;
+    display: none;
+    font-size: 14px;
+}
+
+/* ==========================================
+   4. SECCIÓN BIENVENIDA (BANNER CON VIDEO)
+========================================== */
+.bienvenida-container {
+    margin-bottom: 20px;
+}
+
+.video-banner {
+    position: relative;
+    overflow: hidden; 
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px; 
+}
+
+.video-fondo {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1; 
+}
+
+.banner-contenido {
+    position: relative;
+    z-index: 2; 
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.banner-contenido h2 {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.banner-contenido p {
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    max-width: 700px;
+}
+
+/* ==========================================
+   5. ESTRUCTURA DOS COLUMNAS (QUIÉNES SOMOS + GUARDERÍA)
+========================================== */
+.dos-columnas {
+    display: flex;
+    gap: 20px; 
+    margin-bottom: 20px;
+    align-items: stretch; 
+}
+
+.dos-columnas > * {
+    flex: 1; 
+}
+
+/* --- Ajustes internos del Quiénes Somos --- */
+.quienes-somos {
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 0; 
+    height: 100%; 
+    box-sizing: border-box;
+}
+
+.centrado-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quienes-somos h3 {
+    color: #df5050;
+    margin-top: 0;
+    font-size: 26px; 
+}
+
+.icono-titulo {
+    width: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.quienes-somos p {
+    line-height: 1.6;
+    color: #555;
+    font-size: 16px;
+    margin: 0;
+    text-align: left;
+}
+
+.lista-valores {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+    font-size: 15px;
+    color: #555;
+}
+
+.lista-valores li {
+    margin-bottom: 12px;
+}
+
+.icono-valor {
+    color: #df5050; 
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* --- Ajustes internos de la Guardería --- */
+.guarderia-section {
+    overflow: hidden; 
+    margin-bottom: 0; 
+    height: 100%; 
+    box-sizing: border-box;
+}
+
+.titulo-guarderia {
+    margin-top: 0;
+}
+
+.aviso-horario {
+    font-size: 13px;
+    color: #df5050;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-guarderia {
+    padding: 8px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.label-fecha {
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+}
+
+.input-fecha {
+    font-family: inherit;
+}
+
+.btn-guarderia {
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+}
+
+.titulo-huespedes {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #df5050;
+    font-size: 18px;
+}
+
+/* ==========================================
+  6. CARRUSEL INFINITO DE PERRITOS
+========================================== */
+.carrusel-perritos {
+    margin-top: 10px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap; 
+    position: relative;
+    padding: 10px 0;
+}
+
+.carrusel-track {
+    display: inline-block;
+    animation: moverPerritos 15s linear infinite; 
+}
+
+.carrusel-track img {
+    height: 110px; 
+    width: 170px;  
+    border-radius: 8px; 
+    object-fit: cover; 
+    margin: 0 8px; 
+    border: 3px solid #df5050; 
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3); 
+}
+
+@keyframes moverPerritos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+
+/* ==========================================
+  7. BUSCADOR Y GRILLA DE PRODUCTOS
+========================================== */
+.buscador-principal {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.producto {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    box-sizing: border-box;
+}
+
+.producto:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.imagen-contenedor {
+    border-radius: 12px;
+    margin-bottom: 10px;
+    height: 150px; 
+    overflow: hidden;
+}
+
+.imagen-contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.producto h3 {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #444;
+}
+
+.precio-texto {
+    font-weight: bold;
+    color: #df5050;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.producto button {
+    margin-top: auto; 
+}
+
+/* ACORDEÓN DE DESCRIPCIÓN */
+details {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+}
+
+summary {
+    font-weight: bold;
+    color: #df5050;
+    outline: none; 
+}
+
+details p {
+    margin: 5px 0 0 0;
+    line-height: 1.4;
+}
+
+/* ==========================================
+  8. MENÚ LATERAL (CARRITO)
+========================================== */
+#seccion-carrito {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 320px;
+    max-width: 100%;
+    height: 100vh; 
+    background: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    transition: right 0.4s ease; 
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; 
+}
+
+#seccion-carrito.abierto {
+    right: 0; 
+}
+
+#cerrar-carrito {
+    background: none;
+    color: #333;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 15px;
+    width: auto;
+}
+
+#cerrar-carrito:hover {
+    color: #df5050;
+    background: none;
+}
+
+.total-carrito {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.opciones-entrega-contenedor {
+    margin: 15px 0;
+    text-align: left;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.titulo-entrega {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.label-entrega {
+    display: block;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.btn-finalizar {
+    width: 100%;
+    font-size: 16px;
+}
+
+/* ==========================================
+  9. DISEÑO RESPONSIVE (CELULARES Y TABLETS)
+========================================== */
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .dos-columnas {
+        flex-direction: column; 
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px; 
+    }
+
+    .imagen-contenedor {
+        height: 120px; 
+    }
+
+    .producto h3, .precio-texto {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+
+/* ==========================================
+   10. FOOTER (PIE DE PÁGINA)
+========================================== */
+.footer-principal {
+    background-color: #333; /* Un gris muy oscuro, casi negro, súper elegante */
+    color: white;
+    padding: 40px 20px 20px 20px;
+    border-radius: 12px;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1); /* Sombrita hacia arriba */
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.footer-info h4, .footer-social h4 {
+    color: #df5050; /* Tu rojo para resaltar los subtítulos */
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.footer-info p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.footer-info i {
+    color: #8bc7db; /* Tu color celeste para los iconitos de cel y mapa */
+    margin-right: 10px;
+}
+
+.instagram-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.instagram-link:hover {
+    color: #df5050; /* Se pone rojo cuando le pasas el mouse */
+    transform: scale(1.1); /* Hace un pequeño zoomcito */
+}
+
+.instagram-link i {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.footer-firma {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.footer-firma p {
+    margin: 5px 0;
+}
