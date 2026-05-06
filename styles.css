@@ -520,83 +520,94 @@ details p {
 ========================================== */
 
 /* ==========================================
-   DISEÑO RESPONSIVO MEJORADO (MÓVILES)
+   9. DISEÑO RESPONSIVE (CELULARES Y TABLETS)
 ========================================== */
 @media screen and (max-width: 768px) {
-    /* 1. Header en columna y con espacio entre bloques */
+    /* 1. Header relativo para permitir que el carrito flote arriba a la derecha */
     .header-principal {
-        display: flex;
+        position: relative;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px; /* Más espacio entre logo, registro y carrito */
-        padding: 25px 15px;
+        align-items: flex-start; /* Alinea todo a la izquierda */
+        padding: 20px 15px;
+        gap: 15px;
     }
 
-    /* 2. El saludo de Bienvenida (se verá como un cartelito) */
-    #usuarioInfo {
-        width: 90%;
-        background: rgba(255, 255, 255, 0.2); /* Un fondo sutil */
-        padding: 10px;
-        border-radius: 10px;
-        border: 1px dashed white;
-        font-size: 1.1em;
-        margin: 5px 0;
-        order: 1; /* Lo posiciona justo después del logo */
-    }
-
-    /* 3. Ajuste del Logo */
-    .logo-contenedor {
-        order: 0;
-    }
-    .logo-titulo {
-        font-size: 20px;
-        margin-top: 10px;
-        letter-spacing: 1px;
-    }
-
-    /* 4. Bloque de Registro ordenado */
-    .registro-contenedor {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 12px;
-        order: 2; /* Va después de la bienvenida */
-        padding: 0 10px;
-    }
-
-    .input-registro, .btn-registro {
-        width: 100%;
-        height: 45px; /* Inputs más altos para que sea fácil tocar con el dedo */
-        box-sizing: border-box;
-        font-size: 16px; /* Evita que el iPhone haga zoom automático */
-    }
-
-    /* 5. El Huesito (Carrito) bien centrado y destacado */
+    /* 2. Carrito absoluto en la esquina superior derecha */
     .carrito-icono-contenedor {
-        order: 3; /* Va al final del header */
-        margin-top: 10px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
         background: #fff;
-        padding: 15px;
-        border-radius: 50%; /* Lo hacemos circular */
-        width: 60px;
-        height: 60px;
+        padding: 12px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
         box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        z-index: 10;
     }
 
-    /* 6. Los productos en una sola columna con más aire */
-    .grid-productos {
-        grid-template-columns: 1fr;
-        gap: 25px;
+    /* 3. Ajuste de Logo y Bienvenida */
+    .logo-contenedor {
+        width: 70%; /* Deja espacio libre a la derecha para el carrito */
+    }
+    .logo-titulo {
+        font-size: 20px;
+    }
+
+    #usuarioInfo {
+        width: 100%;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.2);
         padding: 10px;
+        border-radius: 10px;
+        border: 1px dashed #ccc;
     }
 
-    /* 7. El sidebar del carrito ocupa todo el ancho */
-    .carrito-sidebar {
-        width: 100% !important;
+    /* 4. Bloque de Registro: Nombre entero, Email y Botón dividiendo espacio */
+    .registro-contenedor {
+        display: flex;
+        flex-wrap: wrap; /* Permite bajar de línea */
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    #nombre.input-registro {
+        width: 100%; /* Nombre ocupa toda la línea */
+        height: 45px;
+    }
+
+    #email.input-registro {
+        width: 60%; /* Email ocupa la mayor parte abajo */
+        height: 45px;
+        margin: 0;
+    }
+
+    .btn-registro {
+        width: 36%; /* El botón ocupa el resto */
+        height: 45px;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+    }
+
+    /* 5. ARREGLO 2 COLUMNAS: Quiénes somos y Guardería una abajo de la otra */
+    .dos-columnas {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* 6. Grilla de productos */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 7. Sidebar del carrito ocupando toda la pantalla */
+    #seccion-carrito {
+        width: 100%;
     }
 }
 
