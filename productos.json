@@ -54,7 +54,7 @@
         "precio": 2500,
         "categoria": "snacks",
         "descripcion": "La tráquea de res deshidratada es mucho más que un premio; es un mordedor funcional 100% natural.",
-        "img": "assets/traquea-de-vaca.jpg",
+        "img": "assets/traquea.jfif",
         "stock":5,
         "variantes": ["Tráquea XL", "Tráquea L", "Tráquea M", "Tráquea S"]
     },
