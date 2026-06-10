@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Cucha de Pistacha</title>
-    
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -12,7 +11,6 @@
 <body>
     
     <header class="header-principal">
-        
         <div class="logo-contenedor">
             <img src="assets/logo.png" alt="Logo La Cucha de Pistacha" class="logo-img">
             <h1 class="logo-titulo">LA CUCHA DE PISTACHA</h1>
@@ -31,6 +29,16 @@
         </div>
     </header>
 
+    <!-- NAV DE PESTAÑAS -->
+    <nav class="nav-tabs">
+        <a href="index.html" class="tab-link tab-activo">
+            <i class="fa-solid fa-store"></i> Tienda
+        </a>
+        <a href="guarderia.html" class="tab-link">
+            <i class="fa-solid fa-house-chimney-window"></i> Guardería
+        </a>
+    </nav>
+
     <section class="bienvenida-container">
         <div class="banner-hero video-banner">
             <video autoplay loop muted playsinline class="video-fondo">
@@ -45,11 +53,10 @@
     </section>
 
     <div class="dos-columnas">
-        
         <div class="quienes-somos card centrado-vertical">
             <h3><img src="assets/logo.png" alt="¿Quiénes Somos?" class="icono-titulo"> ¿Quiénes Somos?</h3>
             <p>
-                Somos Pistacha & Marisel, nos gusta jugar y cuidar a tus perrhijos mientras vos estás ocupado. En <strong>La Cucha de Pistacha</strong> creemos que tus perrhijos merecen lo mejor: premios ricos, sanos, sin conservantes y un lugar lleno de amor para jugar y gastar energía. <br><br>
+                Somos Pistacha & Marisel, nos gusta jugar y cuidar a tus perrhijos mientras vos estás ocupado. En <strong>La Cucha de Pistacha</strong> creemos que tus perrhijos merecen lo mejor: premios ricos, sanos, sin conservantes y un lugar lleno de amor para jugar y gastar energía.<br><br>
                 ¡Todo lo que hacemos está hecho con mucha dedicación!
             </p>
             <ul class="lista-valores">
@@ -58,67 +65,59 @@
                 <li><i class="fa-solid fa-house-chimney-window icono-valor"></i> <strong>Guardería Segura:</strong> Como en su propia casa.</li>
             </ul>
         </div>
-        
-        <section class="card guarderia-section">
-            <h2 class="titulo-guarderia">Reserva tu Guardería 🏡</h2>
-            <p class="aviso-horario">
-                ⏰ Recuerda: El ingreso de los perris es a partir de las 18:00 hs.
-            </p>
-            
-            <select id="tipo-guarderia" class="input-guarderia">
-                <option value="hora">Por Hora ($4.000)</option>
-                <option value="dia">Día Completo (6 a 8hs - $20.000)</option>
-                <option value="finde">Fin de Semana ($55.000)</option>
-                <option value="paseo">Packs Mensuales Paseos (Consultar)</option>
-            </select>
-            
-            <label for="fecha-guarderia" class="label-fecha">Selecciona la fecha de ingreso:</label>
-            <input type="date" id="fecha-guarderia" class="input-guarderia input-fecha">
-            <input type="number" id="cantidad-guarderia" value="1" min="1" placeholder="Cantidad de horas/días" class="input-guarderia">
-            
-            <button id="sumarGuarderia" class="btn-guarderia">Agregar al Carrito</button>
-        </section>
 
-    </div> 
+        <!-- CTA hacia la guardería en lugar del formulario -->
+        <div class="card centrado-vertical guarderia-cta-card">
+            <div class="guarderia-cta-contenido">
+                <span class="guarderia-cta-emoji">🏡</span>
+                <h3>¿Necesitás guardería?</h3>
+                <p>Reservá el lugar de tu perrhijo fácilmente. Tenemos opciones por hora, día completo o fin de semana.</p>
+                <a href="guarderia.html" class="btn-ir-guarderia">
+                    <i class="fa-solid fa-calendar-check"></i> Reservar Guardería
+                </a>
+            </div>
+        </div>
+    </div>
 
     <section class="card">
         <h3 class="titulo-huespedes" style="margin-top: 0;">🐾 Nuestros Huéspedes 🐾</h3>
         <div class="carrusel-perritos">
             <div class="carrusel-track">
-                <img src="assets/perritos/alfredo.png" alt="Perrito">
-                <img src="assets/perritos/antonio.png" alt="Perrito">
-                <img src="assets/perritos/bombon.png" alt="Perrito">
-                <img src="assets/perritos/budin.png" alt="Perrito">
-                <img src="assets/perritos/chia.png" alt="Perrito">
-                <img src="assets/perritos/eva.png" alt="Perrito">
-                <img src="assets/perritos/felicitas.png" alt="Perrito">
-                <img src="assets/perritos/frigga.png" alt="Perrito">
-                <img src="assets/perritos/hilario.png" alt="Perrito">
-                <img src="assets/perritos/lucas.png" alt="Perrito">
-                <img src="assets/perritos/moro_logan.png" alt="Perrito">
-                <img src="assets/perritos/newton.png" alt="Perrito">
-                <img src="assets/perritos/vilma.png" alt="Perrito">
-                
-                <img src="assets/perritos/alfredo.png" alt="Perrito">
-                <img src="assets/perritos/antonio.png" alt="Perrito">
-                <img src="assets/perritos/bombon.png" alt="Perrito">
-                <img src="assets/perritos/budin.png" alt="Perrito">
-                <img src="assets/perritos/chia.png" alt="Perrito">
-                <img src="assets/perritos/eva.png" alt="Perrito">
-                <img src="assets/perritos/felicitas.png" alt="Perrito">
-                <img src="assets/perritos/frigga.png" alt="Perrito">
-                <img src="assets/perritos/hilario.png" alt="Perrito">
-                <img src="assets/perritos/lucas.png" alt="Perrito">
-                <img src="assets/perritos/moro_logan.png" alt="Perrito">
-                <img src="assets/perritos/newton.png" alt="Perrito">
-                <img src="assets/perritos/vilma.png" alt="Perrito">
+                <img src="assets/perritos/alfredo.png" alt="Alfredo">
+                <img src="assets/perritos/antonio.png" alt="Antonio">
+                <img src="assets/perritos/bombon.png" alt="Bombón">
+                <img src="assets/perritos/budin.png" alt="Budín">
+                <img src="assets/perritos/chia.png" alt="Chía">
+                <img src="assets/perritos/eva.png" alt="Eva">
+                <img src="assets/perritos/felicitas.png" alt="Felicitas">
+                <img src="assets/perritos/frigga.png" alt="Frigga">
+                <img src="assets/perritos/hilario.png" alt="Hilario">
+                <img src="assets/perritos/lucas.png" alt="Lucas">
+                <img src="assets/perritos/moro_logan.png" alt="Moro y Logan">
+                <img src="assets/perritos/newton.png" alt="Newton">
+                <img src="assets/perritos/vilma.png" alt="Vilma">
+                <!-- duplicados para loop infinito -->
+                <img src="assets/perritos/alfredo.png" alt="Alfredo">
+                <img src="assets/perritos/antonio.png" alt="Antonio">
+                <img src="assets/perritos/bombon.png" alt="Bombón">
+                <img src="assets/perritos/budin.png" alt="Budín">
+                <img src="assets/perritos/chia.png" alt="Chía">
+                <img src="assets/perritos/eva.png" alt="Eva">
+                <img src="assets/perritos/felicitas.png" alt="Felicitas">
+                <img src="assets/perritos/frigga.png" alt="Frigga">
+                <img src="assets/perritos/hilario.png" alt="Hilario">
+                <img src="assets/perritos/lucas.png" alt="Lucas">
+                <img src="assets/perritos/moro_logan.png" alt="Moro y Logan">
+                <img src="assets/perritos/newton.png" alt="Newton">
+                <img src="assets/perritos/vilma.png" alt="Vilma">
             </div>
         </div>
     </section>
 
-    <input type="text" id="buscador" placeholder="Buscar snacks, juguetes..." class="buscador-principal">
+    <label for="buscador" class="sr-only">Buscar productos</label>
+    <input type="text" id="buscador" placeholder="Buscar snacks, juguetes..." class="buscador-principal" aria-label="Buscar productos">
 
-    <div id="productos" class="grid"></div> 
+    <div id="productos" class="grid"></div>
 
     <section id="seccion-carrito" class="carrito-oculto">
         <button id="cerrar-carrito">❌ Cerrar</button>
@@ -129,11 +128,11 @@
         <div id="opciones-entrega" class="opciones-entrega-contenedor">
             <p class="titulo-entrega">¿Cómo querés tu pedido?</p>
             <label class="label-entrega">
-                <input type="radio" name="entrega" value="retiro por la zona" checked> 
+                <input type="radio" name="entrega" value="retiro por la zona" checked>
                 Retiro por la zona 🚶‍♂️
             </label>
             <label class="label-entrega">
-                <input type="radio" name="entrega" value="que me llegue a casa"> 
+                <input type="radio" name="entrega" value="que me llegue a casa">
                 Que me llegue a casa 🛵
             </label>
         </div>
@@ -142,26 +141,24 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script src="js/app.js"></script> 
+    <script src="js/app.js"></script>
 
     <footer class="footer-principal">
         <div class="footer-contenido">
-            
             <div class="footer-info">
                 <h4>La Cucha de Pistacha</h4>
                 <p><i class="fa-solid fa-location-dot"></i> Córdoba, Argentina</p>
                 <a href="https://wa.me/5493412287213" target="_blank" class="instagram-link">
-                <p><i class="fa-brands fa-whatsapp"></i> +5493412287213</p> </div>
-                        <div class="footer-social">
+                    <p><i class="fa-brands fa-whatsapp"></i> +5493412287213</p>
+                </a>
+            </div>
+            <div class="footer-social">
                 <h4>¡Seguinos en redes!</h4>
                 <a href="https://www.instagram.com/pistacha.gral.paz" target="_blank" class="instagram-link">
                     <i class="fa-brands fa-instagram"></i> @pistacha.gral.paz
                 </a>
             </div>
-
         </div>
-        
         <div class="footer-firma">
             <p>&copy; 2026 La Cucha de Pistacha. Todos los derechos reservados.</p>
             <p>Desarrollado con ❤️ por SOSA, RUTH MARISEL</p>

@@ -678,3 +678,250 @@ details p {
 .footer-firma p {
     margin: 5px 0;
 }
+/* ==========================================
+   11. NAVEGACIÓN DE PESTAÑAS
+========================================== */
+.nav-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.tab-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: #666;
+    transition: background 0.2s, color 0.2s;
+}
+
+.tab-link:hover {
+    background: #f5f5f5;
+    color: #df5050;
+}
+
+.tab-link.tab-activo {
+    background: #df5050;
+    color: white;
+}
+
+.tab-link i {
+    font-size: 16px;
+}
+
+/* ==========================================
+   12. CTA CARD GUARDERÍA (en index)
+========================================== */
+.guarderia-cta-card {
+    text-align: center;
+    margin-bottom: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.guarderia-cta-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.guarderia-cta-emoji {
+    font-size: 56px;
+    line-height: 1;
+}
+
+.guarderia-cta-card h3 {
+    color: #df5050;
+    margin: 0;
+    font-size: 22px;
+}
+
+.guarderia-cta-card p {
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.btn-ir-guarderia {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 12px 24px;
+    background: #df5050;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-ir-guarderia:hover {
+    background: #c94343;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   13. PÁGINA DE GUARDERÍA
+========================================== */
+.guarderia-pagina {
+    /* wrapper semántico, sin estilos que interfieran */
+}
+
+.guarderia-hero {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.titulo-guarderia-hero {
+    color: #df5050;
+    margin: 0 0 10px 0;
+    font-size: 28px;
+}
+
+.subtitulo-guarderia {
+    color: #555;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Tabla de precios */
+.tabla-precios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.tabla-precios th {
+    background: #df5050;
+    color: white;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.tabla-precios td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+.tabla-precios tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-precios tr:nth-child(even) td {
+    background: #f9f9f9;
+}
+
+.icono-tabla {
+    color: #df5050;
+    margin-right: 6px;
+}
+
+.info-extra-guarderia h4 {
+    color: #df5050;
+    margin-bottom: 10px;
+}
+
+/* Preview precio estimado */
+.precio-estimado-box {
+    background: #f0faf0;
+    border: 1px solid #b2dfb2;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #333;
+    text-align: center;
+}
+
+/* ==========================================
+   14. BADGES DE STOCK EN PRODUCTOS
+========================================== */
+.imagen-contenedor {
+    position: relative; /* necesario para los badges */
+}
+
+.badge-stock-bajo,
+.badge-agotado {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge-stock-bajo {
+    background: #e67e22;
+}
+
+.badge-agotado {
+    background: #888;
+}
+
+/* ==========================================
+   15. SELECT DE VARIANTES (antes era inline style)
+========================================== */
+.select-variante {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+/* Accesibilidad: label oculto visualmente pero disponible para lectores */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ==========================================
+   16. RESPONSIVE para nuevos componentes
+========================================== */
+@media screen and (max-width: 768px) {
+    .nav-tabs {
+        gap: 6px;
+        padding: 8px;
+    }
+
+    .tab-link {
+        flex: 1;
+        justify-content: center;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .tabla-precios {
+        font-size: 13px;
+    }
+
+    .tabla-precios th,
+    .tabla-precios td {
+        padding: 8px 8px;
+    }
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardería - La Cucha de Pistacha</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header-principal">
+        <div class="logo-contenedor">
+            <img src="assets/logo.png" alt="Logo La Cucha de Pistacha" class="logo-img">
+            <h1 class="logo-titulo">LA CUCHA DE PISTACHA</h1>
+        </div>
+
+        <div id="seccion-registro" class="registro-contenedor">
+            <input type="text" id="nombre" placeholder="Tu Nombre" class="input-registro">
+            <input type="email" id="email" placeholder="Tu Email" class="input-registro">
+            <button id="registrar" class="btn-registro">Registrarse</button>
+        </div>
+
+        <div id="btn-carrito" class="carrito-icono-contenedor">
+            <i class="fa-solid fa-bone fa-rotate-180 icono-hueso"></i>
+            <span id="contador-carrito" class="contador-carrito">0</span>
+            <p id="usuarioInfo" class="usuario-info"></p>
+        </div>
+    </header>
+
+    <!-- NAV DE PESTAÑAS -->
+    <nav class="nav-tabs">
+        <a href="index.html" class="tab-link">
+            <i class="fa-solid fa-store"></i> Tienda
+        </a>
+        <a href="guarderia.html" class="tab-link tab-activo">
+            <i class="fa-solid fa-house-chimney-window"></i> Guardería
+        </a>
+    </nav>
+
+    <section class="guarderia-pagina">
+
+        <div class="guarderia-hero card">
+            <h2 class="titulo-guarderia-hero">🏡 Reservá tu lugar en la guardería</h2>
+            <p class="subtitulo-guarderia">
+                Tu perrhijo en buenas manos mientras vos estás ocupado. Ingreso a partir de las <strong>18:00 hs.</strong>
+            </p>
+        </div>
+
+        <div class="dos-columnas">
+
+            <!-- FORMULARIO DE RESERVA -->
+            <section class="card guarderia-section">
+                <h2 class="titulo-guarderia">📋 Nueva Reserva</h2>
+                <p class="aviso-horario">⏰ El ingreso de los perris es a partir de las 18:00 hs.</p>
+
+                <label for="tipo-guarderia" class="label-fecha">Tipo de servicio:</label>
+                <select id="tipo-guarderia" class="input-guarderia">
+                    <option value="hora">Por Hora ($4.000)</option>
+                    <option value="dia">Día Completo (6 a 8hs - $20.000)</option>
+                    <option value="finde">Fin de Semana ($55.000)</option>
+                    <option value="paseo">Packs Mensuales Paseos (Consultar)</option>
+                </select>
+
+                <label for="fecha-guarderia" class="label-fecha">Fecha de ingreso:</label>
+                <input type="date" id="fecha-guarderia" class="input-guarderia input-fecha">
+
+                <label for="cantidad-guarderia" class="label-fecha">Cantidad de horas / días:</label>
+                <input type="number" id="cantidad-guarderia" value="1" min="1" placeholder="Cantidad" class="input-guarderia">
+
+                <div id="precio-estimado" class="precio-estimado-box" style="display:none;">
+                    <span id="texto-precio-estimado"></span>
+                </div>
+
+                <button id="sumarGuarderia" class="btn-guarderia">
+                    <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </section>
+
+            <!-- TABLA DE PRECIOS -->
+            <div class="card">
+                <h3 class="titulo-guarderia">💰 Tabla de Precios</h3>
+                <table class="tabla-precios">
+                    <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Precio</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fa-solid fa-clock icono-tabla"></i> Por Hora</td>
+                            <td>$4.000</td>
+                            <td>Más de 4hs: 15% OFF</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-sun icono-tabla"></i> Día Completo</td>
+                            <td>$20.000</td>
+                            <td>6 a 8 horas</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-calendar-week icono-tabla"></i> Fin de Semana</td>
+                            <td>$55.000</td>
+                            <td>Sábado y domingo</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-shoe-prints icono-tabla"></i> Paseos Mensuales</td>
+                            <td>A consultar</td>
+                            <td>Packs personalizados</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-extra-guarderia">
+                    <h4>🐾 ¿Qué incluye?</h4>
+                    <ul class="lista-valores">
+                        <li><i class="fa-solid fa-shield-heart icono-valor"></i> <strong>Ambiente seguro</strong> y supervisado.</li>
+                        <li><i class="fa-solid fa-paw icono-valor"></i> <strong>Juego y socialización</strong> con otros perros.</li>
+                        <li><i class="fa-solid fa-heart icono-valor"></i> <strong>Mucho amor</strong> de Pistacha & Marisel.</li>
+                        <li><i class="fa-solid fa-camera icono-valor"></i> <strong>Actualizaciones</strong> por Instagram.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SECCIÓN DE HUÉSPEDES -->
+        <section class="card">
+            <h3 class="titulo-huespedes" style="margin-top: 0;">🐾 Nuestros Huéspedes 🐾</h3>
+            <div class="carrusel-perritos">
+                <div class="carrusel-track">
+                    <img src="assets/perritos/alfredo.png" alt="Alfredo">
+                    <img src="assets/perritos/antonio.png" alt="Antonio">
+                    <img src="assets/perritos/bombon.png" alt="Bombón">
+                    <img src="assets/perritos/budin.png" alt="Budín">
+                    <img src="assets/perritos/chia.png" alt="Chía">
+                    <img src="assets/perritos/eva.png" alt="Eva">
+                    <img src="assets/perritos/felicitas.png" alt="Felicitas">
+                    <img src="assets/perritos/frigga.png" alt="Frigga">
+                    <img src="assets/perritos/hilario.png" alt="Hilario">
+                    <img src="assets/perritos/lucas.png" alt="Lucas">
+                    <img src="assets/perritos/moro_logan.png" alt="Moro y Logan">
+                    <img src="assets/perritos/newton.png" alt="Newton">
+                    <img src="assets/perritos/vilma.png" alt="Vilma">
+                    <!-- duplicados para loop infinito -->
+                    <img src="assets/perritos/alfredo.png" alt="Alfredo">
+                    <img src="assets/perritos/antonio.png" alt="Antonio">
+                    <img src="assets/perritos/bombon.png" alt="Bombón">
+                    <img src="assets/perritos/budin.png" alt="Budín">
+                    <img src="assets/perritos/chia.png" alt="Chía">
+                    <img src="assets/perritos/eva.png" alt="Eva">
+                    <img src="assets/perritos/felicitas.png" alt="Felicitas">
+                    <img src="assets/perritos/frigga.png" alt="Frigga">
+                    <img src="assets/perritos/hilario.png" alt="Hilario">
+                    <img src="assets/perritos/lucas.png" alt="Lucas">
+                    <img src="assets/perritos/moro_logan.png" alt="Moro y Logan">
+                    <img src="assets/perritos/newton.png" alt="Newton">
+                    <img src="assets/perritos/vilma.png" alt="Vilma">
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- CARRITO (igual al index) -->
+    <section id="seccion-carrito" class="carrito-oculto">
+        <button id="cerrar-carrito">❌ Cerrar</button>
+        <h2>Tu Carrito</h2>
+        <ul id="lista-carrito"></ul>
+        <p class="total-carrito">Total: $<span id="total">0</span></p>
+
+        <div id="opciones-entrega" class="opciones-entrega-contenedor">
+            <p class="titulo-entrega">¿Cómo querés tu pedido?</p>
+            <label class="label-entrega">
+                <input type="radio" name="entrega" value="retiro por la zona" checked>
+                Retiro por la zona 🚶‍♂️
+            </label>
+            <label class="label-entrega">
+                <input type="radio" name="entrega" value="que me llegue a casa">
+                Que me llegue a casa 🛵
+            </label>
+        </div>
+
+        <button id="finalizar" class="btn-finalizar">Finalizar Pedido (WhatsApp)</button>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/app.js"></script>
+
+    <footer class="footer-principal">
+        <div class="footer-contenido">
+            <div class="footer-info">
+                <h4>La Cucha de Pistacha</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Córdoba, Argentina</p>
+                <a href="https://wa.me/5493412287213" target="_blank" class="instagram-link">
+                    <p><i class="fa-brands fa-whatsapp"></i> +5493412287213</p>
+                </a>
+            </div>
+            <div class="footer-social">
+                <h4>¡Seguinos en redes!</h4>
+                <a href="https://www.instagram.com/pistacha.gral.paz" target="_blank" class="instagram-link">
+                    <i class="fa-brands fa-instagram"></i> @pistacha.gral.paz
+                </a>
+            </div>
+        </div>
+        <div class="footer-firma">
+            <p>&copy; 2026 La Cucha de Pistacha. Todos los derechos reservados.</p>
+            <p>Desarrollado con ❤️ por SOSA, RUTH MARISEL</p>
+        </div>
+    </footer>
+
+</body>
+</html>
